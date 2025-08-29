@@ -152,35 +152,42 @@ public class Prelim extends javax.swing.JFrame {
         int x = hb1 - hb2;
         int y = hb2 -hb1;
         
-        if(a == 1 && b == 1 || a == 2 && b == 2 || a == 3 && b == 3) {
+        if((a == 1) && (b == 1) || (a == 2) && (b == 2) || (a == 3) && (b == 3)) {
             JOptionPane.showMessageDialog(null, "Draw", "RESULT", JOptionPane.INFORMATION_MESSAGE);
         }
-        else if(a == 1 && b == 2 || a == 2 && b == 3 || a == 3 && b == 1) {
+        else if((a == 1) && (b == 2) || (a == 2) && (b == 3) || (a == 3) && (b == 1)) {
             JOptionPane.showMessageDialog(null, "Player 1 wins!", "RESULT", JOptionPane.INFORMATION_MESSAGE);
-            txtHB1.setText("" + y);
+            txtHB1.setText("" + (hb1 + 1));
+            txtHB2.setText("" + (hb2 - 1));
         }
-        else if(a == 1 && b == 3 || a == 2 && b == 1 || a == 3 && b == 2) {
+        else if((a == 1) && (b == 3) || (a == 2) && (b == 1) || (a == 3) && (b == 2)) {
             JOptionPane.showMessageDialog(null, "Player 1 wins!", "RESULT", JOptionPane.INFORMATION_MESSAGE);
-            txtHB1.setText("" + y);
+            txtHB1.setText("" + (hb1 + 1));
+            txtHB2.setText("" + (hb2 - 1));
         }
-        else if(a == 2 && b == 1 || a == 1 && b == 2 || a == 2 && b == 3) {
+        else if((a == 2) && (b == 1) || (a == 1) && (b == 2) || (a == 2) && (b == 3)) {
             JOptionPane.showMessageDialog(null, "Player 1 wins!", "RESULT", JOptionPane.INFORMATION_MESSAGE);
-            txtHB1.setText("" + y);
+            txtHB1.setText("" + (hb1 + 1));
+            txtHB2.setText("" + (hb2 - 1));
         }
-        else if(a == 3 && b == 1 || a == 2 && b == 1 || a == 2 && b == 3) {
+        else if((a == 3) && (b == 1) || (a == 2) && (b == 1) || (a == 2) && (b == 3)) {
             JOptionPane.showMessageDialog(null, "Player 2 wins!", "RESULT", JOptionPane.INFORMATION_MESSAGE);
-            txtHB2.setText("" + x);
+            txtHB1.setText("" + (hb1 + 1));
+            txtHB2.setText("" + (hb2 - 1));
         }
-        else if(a == 3 && b == 1 || a == 2 && b == 3 || a == 3 && b == 1) {
+        else if((a == 3) && (b == 1) || (a == 2) && (b == 3) || (a == 3) && (b == 1)) {
             JOptionPane.showMessageDialog(null, "Player 2 wins!", "RESULT", JOptionPane.INFORMATION_MESSAGE);
-            txtHB2.setText("" + x);
+            txtHB1.setText("" + (hb1 + 1));
+            txtHB2.setText("" + (hb2 - 1));
         }
-        else if(a == 2 && b == 1 || a == 3 && b == 2 || a == 2 && b == 3) {
+        else if((a == 2) && (b == 1) || (a == 3) && (b == 2) || (a == 2) && (b == 3)) {
             JOptionPane.showMessageDialog(null, "Player 2 wins!", "RESULT", JOptionPane.INFORMATION_MESSAGE);
             txtHB2.setText("" + x);
         }
         else {
             JOptionPane.showMessageDialog(null, "Invalid choice please select option", "RESULT", JOptionPane.WARNING_MESSAGE);
+            txtHB1.setText("" + (hb1 - 1));
+            txtHB2.setText("" + (hb2 + 1));
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
