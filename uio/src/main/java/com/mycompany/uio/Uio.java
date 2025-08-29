@@ -3,7 +3,7 @@
  */
 
 package com.mycompany.uio;
-
+import java.util.Scanner;
 /**
  *
  * @author CL2~PC17
