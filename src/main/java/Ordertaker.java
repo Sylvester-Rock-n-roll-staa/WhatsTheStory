@@ -97,7 +97,7 @@ public class Ordertaker extends javax.swing.JFrame {
         jLabel10.setText("[2]Royal ₱ 15");
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        jLabel11.setText("[3]Mountain Dew ₱ 15");
+        jLabel11.setText("[3]Mountain Dew ₱ 18");
 
         jLabel12.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
         jLabel12.setText("[4]Sting ₱ 25");
@@ -221,15 +221,15 @@ public class Ordertaker extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(6, 6, 6)
-                                                .addComponent(jLabel7))
                                             .addComponent(jLabel6)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(6, 6, 6)
-                                                .addComponent(jLabel15)
-                                                .addGap(36, 36, 36)
-                                                .addComponent(txtopt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel7)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                        .addComponent(jLabel15)
+                                                        .addGap(36, 36, 36)
+                                                        .addComponent(txtopt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addGap(87, 87, 87)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,9 +292,9 @@ public class Ordertaker extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel10))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
