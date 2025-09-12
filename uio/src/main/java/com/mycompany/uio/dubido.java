@@ -16,7 +16,7 @@ public class dubido {
         System.out.println("[1] Snacks");
         System.out.println("[1] Hotdog [25.00]");
         System.out.println("[2] Siomai [14.00]");
-        System.out.println("[1] Drinks");
+        System.out.println("[2] Drinks");
         System.out.println("[1] Coca-cola [15.00]");
         System.out.println("[2] Water [10.00]");
         //input for choice 
@@ -82,9 +82,9 @@ public class dubido {
                 int coke = 15;
                 int water = 10;
                 System.out.println("Enter your choice of drinks:");
-                int snacks = input.nextInt();
+                int drinks = input.nextInt();
                 
-                    if(snacks == 1) {
+                    if(drinks == 1) {
                         System.out.println("You choice coca-cola");
                         System.out.println("Enter Quantity");
                         int quan = input.nextInt();
@@ -105,7 +105,7 @@ public class dubido {
                         }
                         System.out.println("Change is: " + change);
                         }
-                    else if(snacks == 2) {
+                    else if(drinks == 2) {
                         System.out.println("You choice water");
                         System.out.println("Enter Quantity");
                         int quan = input.nextInt();
