@@ -4,6 +4,7 @@
  */
 package com.mycompany.uio;
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  *
  * @author USER
@@ -11,11 +12,12 @@ import java.util.Scanner;
 public class dpwh {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        ArrayList<String> receipt = new ArrayList<>();
         System.out.println("CAFETIREA");
-        System.out.println("[1] Snacks");
+        System.out.println("[1.0] Snacks");
         System.out.println("[1] Hotdog [25.00]");
         System.out.println("[2] Siomai [14.00]");
-        System.out.println("[1] Drinks");
+        System.out.println("[2.0] Drinks");
         System.out.println("[1] Coca-cola [15.00]");
         System.out.println("[2] Water [10.00]");
         //input for choice 
@@ -36,46 +38,62 @@ public class dpwh {
                 System.out.println("You choose hotdog");
                 System.out.println("Enter Quantity");
                 int quan = input.nextInt();
-                int quan1 = quan * hot;
-                System.out.println("Subtotal" + quan1);
+                int subtotal = quan * hot;
+                System.out.println("Subtotal" + subtotal);
                 double tax = 0.12;
-                double vat = quan1 * tax;
-                double total = vat + quan1;
+                double vat = (int) subtotal * tax;
+                double total = vat + subtotal;
                 System.out.println("Total" + total);
                 System.out.println("Enter your cash:");
                 int csh = input.nextInt();
                 double change = csh - total;
-                System.out.println("Change is: " + change);
-                while(csh<total)
-                {
-                 System.out.println("Enter your cash:");
-                csh = input.nextInt();
+                
+                receipt.add("\n Hotdog x" + quan +
+                        "\n Subtotal: " + subtotal +
+                        "\n Total: " + total +
+                        "\n Change:" + change);
+                while(csh<total) {
+                    System.out.println("Enter exact amount you cash");
+                    csh = input.nextInt();
                 }
-                System.out.println("Change is: " + change);
+                System.out.println("::::::::::::::::::::::::::");
+                System.out.println(":::::::::RECEIPT::::::::::");
+                for (String item : receipt) {
+                    System.out.println(item);
                 }
+                System.out.println("::::::::::::::::::::::::::");
+                }
+                        
                 else if(snacks == 2)
                 {
                 System.out.println("You choose siomai");
                 System.out.println("Enter Quantity");
                 int quan = input.nextInt();
-                int quan1 = quan * siomai;
-                System.out.println("Subtotal" + quan1);
+                int subtotal = quan * siomai;
+                System.out.println("Subtotal" + subtotal);
                 double tax = 0.12;
-                double vat = quan1 * tax;
-                double total = vat + quan1;
+                double vat = (int) subtotal * tax;
+                double total = vat + subtotal;
                 System.out.println("Total" + total);
                 System.out.println("Enter your cash:");
                 int csh = input.nextInt();
                 double change = csh - total;
-                System.out.println("Change is: " + change);
-                while(csh<total)
-                {
-                 System.out.println("Enter your cash:");
-                csh = input.nextInt();
+                
+                receipt.add("\n Siomai x" + quan +
+                        "\n Subtotal: " + subtotal +
+                        "\n Total: " + total +
+                        "\n Change:" + change);
+                while(csh<total) {
+                    System.out.println("Enter exact amount you cash");
+                    csh = input.nextInt();
                 }
-                System.out.println("Change is: " + change);
+                System.out.println("::::::::::::::::::::::::::");
+                System.out.println(":::::::::RECEIPT::::::::::");
+                for (String item : receipt) {
+                    System.out.println(item);
                 }
-            }
+                System.out.println("::::::::::::::::::::::::::");
+                }
             else if(choi ==2)
             {
             System.out.println("Drinks");
@@ -86,48 +104,65 @@ public class dpwh {
                 
                 if(drinks == 1)
                 {
-                System.out.println("You Choose Coca-Cola");
+                System.out.println("You choose Coca-Cola");
                 System.out.println("Enter Quantity");
                 int quan = input.nextInt();
-                int quan1 = quan * coke;
-                System.out.println("Subtotal" + quan1);
+                int subtotal = quan * coke;
+                System.out.println("Subtotal" + subtotal);
                 double tax = 0.12;
-                double vat = quan1 * tax;
-                double total = vat + quan1;
+                double vat = (int) subtotal * tax;
+                double total = vat + subtotal;
                 System.out.println("Total" + total);
                 System.out.println("Enter your cash:");
                 int csh = input.nextInt();
                 double change = csh - total;
-                System.out.println("Change is: " + change);
-                while(csh<total)
-                {
-                 System.out.println("Enter your cash:");
-                csh = input.nextInt();
+                
+                receipt.add("\n Coca-Cola x" + quan +
+                        "\n Subtotal: " + subtotal +
+                        "\n Total: " + total +
+                        "\n Change:" + change);
+                while(csh<total) {
+                    System.out.println("Enter exact amount you cash");
+                    csh = input.nextInt();
                 }
-                System.out.println("Change is: " + change);
+                System.out.println("::::::::::::::::::::::::::");
+                System.out.println(":::::::::RECEIPT::::::::::");
+                for (String item : receipt) {
+                    System.out.println(item);
+                }
+                System.out.println("::::::::::::::::::::::::::");
                 }
                 else if(drinks == 2)
                 {
-                System.out.println("You Choose Water");
+                System.out.println("You choose Water");
                 System.out.println("Enter Quantity");
                 int quan = input.nextInt();
-                int quan1 = quan * water;
-                System.out.println("Subtotal" + quan1);
+                int subtotal = quan * water;
+                System.out.println("Subtotal" + subtotal);
                 double tax = 0.12;
-                double vat = quan1 * tax;
-                double total = vat + quan1;
+                double vat = (int) subtotal * tax;
+                double total = vat + subtotal;
                 System.out.println("Total" + total);
                 System.out.println("Enter your cash:");
                 int csh = input.nextInt();
                 double change = csh - total;
-                System.out.println("Change is: " + change);
-                while(csh<total)
-                {
-                 System.out.println("Enter your cash:");
-                csh = input.nextInt();
+                
+                receipt.add("\n Water x" + quan +
+                        "\n Subtotal: " + subtotal +
+                        "\n Total: " + total +
+                        "\n Change:" + change);
+                while(csh<total) {
+                    System.out.println("Enter exact amount you cash");
+                    csh = input.nextInt();
                 }
-                System.out.println("Change is: " + change);
+                System.out.println("::::::::::::::::::::::::::");
+                System.out.println(":::::::::RECEIPT::::::::::");
+                for (String item : receipt) {
+                    System.out.println(item);
+                }
+                System.out.println("::::::::::::::::::::::::::");
                 }
             }
+        }
     }
 }
